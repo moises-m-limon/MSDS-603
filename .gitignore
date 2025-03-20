@@ -1,0 +1,9 @@
+# Ignore committing local MLFlow runs and artifacts
+mlruns/
+save_data/
+images/
+models/
+# Ignore SQLLite local DB
+*.db
+# Ignore committing lecture slides
+Slides/
