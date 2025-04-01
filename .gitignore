@@ -7,4 +7,10 @@ models/
 *.db
 # Ignore committing lecture slides
 Slides/
-Data/
+# Ignore everything in the Data folder
+course files/Data/*
+
+# Allow tracking of .dvc files within Data folder
+!course files/Data/**/*.dvc
+!course files/Data/**/*.dvc.lock
+!course files/Data/.gitignore
