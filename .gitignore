@@ -7,3 +7,4 @@ models/
 *.db
 # Ignore committing lecture slides
 Slides/
+Data/
