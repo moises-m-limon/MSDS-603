@@ -1,3 +1,4 @@
+course files/Scripts/__pycache__
 # Ignore committing local MLFlow runs and artifacts
 mlruns/
 save_data/

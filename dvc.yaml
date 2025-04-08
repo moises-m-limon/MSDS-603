@@ -1,0 +1,23 @@
+# stages:
+#   prepare:
+#     cmd: python "course files/Scripts/create_features.py"
+#     deps:
+#       - "course files/Data/adult.data"
+#       - "course files/Data/adult.test"
+#       - "course files/Scripts/create_features.py"
+#     outs:
+#       - "course files/Data/pipeline.pkl"
+#       - "course files/Data/processed_train_data.csv"
+#       - "course files/Data/processed_test_data.csv"
+
+stages:
+  prepare:
+    cmd: python "course files/Scripts/preprocessing.py"
+    deps:
+      - "course files/Data/diabetes_train.csv"
+      - "course files/Data/diabetes_test.csv"
+      - "course files/Scripts/preprocessing.py"
+    outs:
+      - "course files/Data/pipeline.pkl"
+      - "course files/Data/processed_train_data.csv"
+      - "course files/Data/processed_test_data.csv"

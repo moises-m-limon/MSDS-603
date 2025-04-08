@@ -1,0 +1,30 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: python "course files/Scripts/preprocessing.py"
+    deps:
+    - path: course files/Data/diabetes_test.csv
+      hash: md5
+      md5: 1ed2cd9d889f348c853258a5c690b055
+      size: 19205
+    - path: course files/Data/diabetes_train.csv
+      hash: md5
+      md5: c713066d61003cad519277f7564c212d
+      size: 75971
+    - path: course files/Scripts/preprocessing.py
+      hash: md5
+      md5: 108aca94eef7f1da9f5756ccda63f280
+      size: 1947
+    outs:
+    - path: course files/Data/pipeline.pkl
+      hash: md5
+      md5: 2823087ef1c08e31e9b89e681a39dc61
+      size: 1580
+    - path: course files/Data/processed_test_data.csv
+      hash: md5
+      md5: f4adff55e3a09d1a2d3463b61007331d
+      size: 17804
+    - path: course files/Data/processed_train_data.csv
+      hash: md5
+      md5: bcc74d7417cc55fdb871d1fbbce93ee0
+      size: 71231
