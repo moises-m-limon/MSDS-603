@@ -4,10 +4,12 @@ mlruns/
 save_data/
 images/
 models/
+.metaflow/
 # Ignore SQLLite local DB
 *.db
 # Ignore committing lecture slides
 Slides/
+Slides_w_notes/
 # Ignore everything in the Data folder
 course files/Data/*
 
@@ -15,3 +17,6 @@ course files/Data/*
 !course files/Data/**/*.dvc
 !course files/Data/**/*.dvc.lock
 !course files/Data/.gitignore
+course files/Scripts/mlflow-gcp/sa-private-key.json
+data/
+mlartifacts/
