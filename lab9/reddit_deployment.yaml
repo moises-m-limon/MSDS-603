@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reddit-deployment
+  labels:
+    app: reddit
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: reddit
+  template:
+    metadata:
+      labels:
+        app: reddit
+    spec:
+      containers:
+      - name: reddit
+        image: gcr.io/msds-603-1746246107/reddit-model:latest
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+        env:
+        - name: MODEL_PATH
+          value: "/app/model"
+        - name: PORT
+          value: "8000" 
